@@ -11,9 +11,9 @@
 Вывод `docker compose -p lr0kariev ps`:
 
 ```text
-NAME                IMAGE            SERVICE   STATUS                    PORTS
-lr0kariev-redis-1   redis:7-alpine   redis     Up (healthy)              6379/tcp
-lr0kariev-web-1     lr0kariev-web    web       Up                        0.0.0.0:8081->5000/tcp, [::]:8081->5000/tcp
+NAME                IMAGE            COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+lr0kariev-redis-1   redis:7-alpine   "docker-entrypoint.s…"   redis     14 seconds ago   Up 14 seconds (healthy)   6379/tcp
+lr0kariev-web-1     lr0kariev-web    "python app.py"          web       14 seconds ago   Up 8 seconds              0.0.0.0:8081->5000/tcp, [::]:8081->5000/tcp
 ```
 
 У Redis указан только внутренний порт `6379/tcp`, публикации наружу нет. В репозитории у веб-сервиса указан порт `8080:5000`.
