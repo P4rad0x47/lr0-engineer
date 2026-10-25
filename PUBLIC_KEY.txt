@@ -1,0 +1,1 @@
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIClafTxo/mDR2fsi4p8AfAK9y/flcYXZJ4ZKcoSXlmWd Карьев-БИС-24-1
