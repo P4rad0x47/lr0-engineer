@@ -4,13 +4,10 @@ services:
     ports:
       - "8080:5000"
     environment:
-      - REDIS_HOST=redis
+      REDIS_HOST: redis
     depends_on:
       redis:
         condition: service_healthy
-    networks:
-      - lab_network
-
   redis:
     image: redis:7-alpine
     healthcheck:
@@ -18,9 +15,3 @@ services:
       interval: 5s
       timeout: 3s
       retries: 5
-    networks:
-      - lab_network
-
-networks:
-  lab_network:
-    driver: bridge
